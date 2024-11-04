@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>  
+
+<html lang="en">  
+
+<head>  
+
+<meta charset="UTF-8">  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+
+<title>移动端效果图</title>  
+
+<style>  
+
+	body, html {  
+
+		margin: 0;  
+
+		padding: 0;  
+
+		width: 100%;  
+
+		height: 100vh;  
+
+		overflow: hidden;  
+
+	}  
+
+  
+
+	.container {  
+
+		position: relative;  
+
+		width: 100%;  
+
+		height: 100vh; /* 可以根据需要调整高度 */  
+
+		margin: 0 auto;  
+
+		text-align: center;  
+
+		overflow: hidden;  
+
+		max-width: 640px;  
+
+		max-height: 1008px;  
+
+		/* 移除原来的高度设置，让高度跟随视口变化 */  
+
+		/* height: 1008px; */  
+
+		/* 使用背景图代替<img>标签 */  
+
+		background-image: url("背景图.jpg");  
+
+		background-size: cover; /* 确保背景图覆盖整个容器，同时保持宽高比 */  
+
+		background-position: center; /* 背景图居中显示 */  
+
+		background-repeat: no-repeat; /* 背景图不重复 */  
+
+	}  
+
+  
+
+	.back-button {  
+
+		position: absolute;  
+
+		top: 10px;  
+
+		left: 10px;  
+
+		width: 39px;  
+
+		height: 41px;  
+
+		background-image: url("返回键1.png");  
+
+		background-size: contain;  
+
+		background-repeat: no-repeat;  
+
+		cursor: pointer;  
+
+		transition: background-color 0.2s ease;  
+
+	}  
+
+  
+
+	.back-button:active {  
+
+		background-color: rgba(0, 0, 0, 0.2);  
+
+		box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);  
+
+	}  
+
+  
+
+	.zikuang-wrapper {  
+
+		display: flex;  
+
+		justify-content: space-between;  
+
+		position: absolute;  
+
+		top: 100px;  
+
+		left: 50%;  
+
+		transform: translateX(-50%);  
+
+		width: calc(100% - 160px);  
+
+	}  
+
+  
+
+	.zikuang {  
+
+		width: 150px;  
+
+		height: 200px;  
+
+		background-size: contain;  
+
+		background-repeat: no-repeat;  
+
+		cursor: pointer;  
+
+		transition: background-color 0.2s ease;  
+
+	}  
+
+  
+
+	.zikuang:nth-child(1) {  
+
+		background-image: url("字框1.png");  
+
+	}  
+
+  
+
+	.zikuang:nth-child(2) {  
+
+		background-image: url("字框2.png");  
+
+	}  
+
+  
+
+	.zikuang:nth-child(3) {  
+
+		background-image: url("字框3.png");  
+
+	}  
+
+</style>  
+
+</head>  
+
+<body>  
+
+<div class="container">  
+
+	<!-- 移除原来的<img>标签 -->  
+
+	<div class="back-button" onclick="window.history.back();"></div>  
+
+	<div class="zikuang-wrapper">  
+
+		<div class="zikuang"></div>  
+
+		<div class="zikuang"></div>  
+
+		<div class="zikuang"></div>  
+
+	</div>  
+
+</div>  
+
+</body>  
+
+</html>
